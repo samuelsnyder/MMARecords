@@ -1,18 +1,5 @@
-<?php 
+<?php include 'header.php';  ?>
 
-ini_set('display_errors', 'On');
-include 'db.php';
-//session_start();
-?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
-<html>
-<head>
-	<style type="text/css" src=""></style>
-	<script src="//code.jquery.com/jquery-1.10.2.js"></script>
-<!DOCTYPE html>
-
-<html>
-<body>
 
 <h1>Lookup Records</h1>
 
@@ -26,7 +13,10 @@ include 'db.php';
 <a href="addfighter.php"> Add Fighter </a><br>
 <a href="addfight.php"> Add Fight Result </a><br>
 <a href="addevent.php"> Add MMA Event </a><br>
-<a href="addpromotion.php"> Add MMA Promotion </a><br>
+<a href="addpromo.php"> Add MMA Promotion </a><br>
+<a href="addstyle.php"> Add Martial Art Style </a><br>
+<a href="addfighterstyle.php"> Add Style to Fighter </a><br>
+
 
 </body>
 </html>

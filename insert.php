@@ -1,11 +1,13 @@
+<?php include 'header.php';  ?>
+
+
 <?php
-ini_set('display_errors', 'On');
-include 'db.php'; 
 
-if (!$_POST["FirstName"] || !$_POST["LastName"]) {
-	die("first name and last name required");
+
+foreach ($_POST as $key => $value){
+  echo "{$key} = {$value}\r\n";
+  echo "hola";
 }
-
 
 $i = 0;
 $query = '';
@@ -44,7 +46,7 @@ $query .= ")";
 
 
 if (!$mysqli->query($query)) {
-   echo "Data insertion failed: (" . $mysqli->errno . ") " . $mysqli->error;
+   echo "Data insertion failed<br>Query: ". $query . "<br>Error: (" . $mysqli->errno . ") " . $mysqli->error;
 }
 
 else

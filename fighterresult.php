@@ -1,6 +1,7 @@
+<?php include 'header.php';  ?>
+
 <?php
-ini_set('display_errors', 'On');
-include 'db.php'; 
+
 
 $query = "SELECT FighterID, FirstName, LastName FROM Fighters WHERE FirstName = '" . $_POST['FirstName'] ."' OR LastName = '" . $_POST['LastName']."' ORDER BY FirstName ASC";
 

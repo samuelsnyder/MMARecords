@@ -1,7 +1,5 @@
-<?php
-ini_set('display_errors', 'On');
-include 'db.php'; 
-?>
+<?php include 'header.php';  ?>
+
 <form action="insert.php" method="post">
 	<input type="hidden" name='Type' value='Fighters'>
 	First Name: <input name=FirstName type=text value=''> Last Name: <input  name=LastName type=text value=''><br>

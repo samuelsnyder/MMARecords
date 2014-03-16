@@ -39,7 +39,7 @@ DROP TABLE IF EXISTS `Styles`;
 DROP TABLE IF EXISTS `FighterStyles`;
 -- Check for duplicate table. Bridge table for many to many relationship between fighters and styles
 
-		CREATE TABLE FightertStyles(
+		CREATE TABLE FighterStyles(
   StyleID int(5) NOT NULL,
   FighterID int(5) NOT NULL,
   PRIMARY KEY (`FighterID`, `StyleID`),
@@ -70,7 +70,7 @@ DROP TABLE IF EXISTS `Events`;
   EventDate datetime NOT NULL,
   PromoID int NOT NULL,
   PRIMARY KEY (`EventID`),
-  CONSTRAINT `FK_Promotions_Events` FOREIGN KEY (`EventID`) REFERENCES `Events` (`EventID`) 
+  CONSTRAINT `FK_Promotions_Events` FOREIGN KEY (`PromoID`) REFERENCES `Promotions` (`PromoID`) 
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 DROP TABLE IF EXISTS `Fights`;
