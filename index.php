@@ -2,7 +2,7 @@
 
 ini_set('display_errors', 'On');
 include 'db.php';
-session_start();
+//session_start();
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
 <html>
