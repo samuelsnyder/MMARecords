@@ -14,33 +14,19 @@ session_start();
 <html>
 <body>
 
-<table>
-    <tr>
-        <td>Fighters</td>
-    </tr>
-    
-    <tr>
-        <td>Name</td>
-        <td>Height</td>
-        <td>Weight</td>
-        <td>Reach</td>    
-    </tr>
-    
-    <tr>
-    	
-        <td>Ronda Rousey</td>
-        <td>5'7"</td>
-        <td>135 lbs</td>
-        <td>66 inches</td>
-        
-    </tr>
-</table>
+<h1>Lookup Records</h1>
+
+<a href="fighter.php"> Fighter </a><br>
+<a href="fight.php"> Fight Result </a><br>
+<a href="event.php"> MMA Event </a><br>
+<a href="promotion.php"> MMA Promotion </a><br>
+
+<h1>Add to the database</h1>
 
 <a href="addfighter.php"> Add Fighter </a><br>
 <a href="addfight.php"> Add Fight Result </a><br>
 <a href="addevent.php"> Add MMA Event </a><br>
 <a href="addpromotion.php"> Add MMA Promotion </a><br>
-<a href="add.php"> Add MMA Promotion </a><br>
 
 </body>
 </html>
