@@ -1,28 +1,55 @@
-
 <?php
-ini_set('display_errors', 'On'); 
-/*Database info */
-$dbhost = 'oniddb.cws.oregonstate.edu'; 
-$dbname = '-db'; 
-$dbuser = '-db'; 
-$dbpass = ''; 
- 
-  
-$mysql_handle= mysql_connect($dbhost, $dbuser, $dbpass) 
-or die("Error connecting to database server"); 
-  
-mysql_select_db($dbname, $mysql_handle) 
-or die("Error selecting database: $dbname"); 
+ini_set('display_errors', 'On');
+include 'db.php'; 
+
+if (!$_POST["FirstName"] || !$_POST["LastName"]) {
+	die("first name and last name required");
+}
 
 
+$i = 0;
+$query = '';
+//get attribute names
+foreach ($_POST as $name => $val)
+{
+	if ($i == 0)
+	{
+		$query = "INSERT INTO " . $val . "(";
+	}
+	if ($i >1){
+		$query .= ", ";
+	}
+	if ($i > 0){
+     $query .= "`"  . htmlspecialchars($name) . "`";
+ 	}
+     $i++;
+}
+$query .= ")";
+$query .= "  VALUES (";
 
-$sql=$mysqli->prepare"INSERT INTO Promotions (PromotionName)
-VALUES
-('$_POST[PromotionName]')";
+//get attribute values
+$i = 0;
+foreach ($_POST as $name => $val)
+{
+	if ($i >1){
+		$query .= ", ";
+	}
+	if ($i > 0){
+     $query .= "'" .  htmlspecialchars($val) . "'";
+	}
+     $i++;
+}
 
-if (!mysqli_query($mysql_handle,$sql))
-  {
-  die('Error: ' . mysqli_error($mysql_handle));
-  }
-echo "1 record added";
+$query .= ")";
+
+
+if (!$mysqli->query($query)) {
+   echo "Data insertion failed: (" . $mysqli->errno . ") " . $mysqli->error;
+}
+
+else
+{
+	echo "Data added to database";
+}
+
 ?>
