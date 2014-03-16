@@ -4,10 +4,6 @@
 <?php
 
 
-foreach ($_POST as $key => $value){
-  echo "{$key} = {$value}\r\n";
-  echo "hola";
-}
 
 $i = 0;
 $query = '';
