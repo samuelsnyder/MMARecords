@@ -1,19 +1,8 @@
-<style type="text/css" media="screen">
-input {
-  border: none;
-  background: none;
-  color: #00f;
-  text-decoration: underline;
-  cursor: pointer;
-  display: in-line;
-  margin: 0px;
-  padding: 0px;
-}
-</style>
 <?php
-include 'db.php'; 
+include 'header.php'; 
+?>
 
-
+<?php
 $query = "SELECT FighterID, FirstName, LastName FROM Fighters ORDER BY FirstName ASC";
 
 $res = $mysqli->query($query);
