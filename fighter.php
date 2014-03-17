@@ -149,8 +149,8 @@ for ($row_no = 0; $row_no < $res->num_rows; $row_no++) {
 	echo "<tr>";
 	echo "<td>";
 	echo $row['FirstName'] . " " . $row['FirstName'] . "</td><td>";
-	if ($row['ResultCode'] == 1) {echo "Won";}
-	if ($row['ResultCode'] == 2) {echo "Lost";}
+	if ($row['ResultCode'] == 2) {echo "Won";}
+	if ($row['ResultCode'] == 1) {echo "Lost";}
 	if ($row['ResultCode'] == 0) {echo "Draw";}
 	echo "</td><td>";
 	echo $row['EventName'];

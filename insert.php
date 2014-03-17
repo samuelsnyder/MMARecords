@@ -12,13 +12,13 @@ foreach ($_POST as $name => $val)
 {
 	if ($i == 0)
 	{
-		$query = "INSERT INTO " . mysql_real_escape_string($val) . "(";
+		$query = "INSERT INTO " . mysqli_real_escape_string($mysqli, $val) . "(";
 	}
 	if ($i >1){
 		$query .= ", ";
 	}
 	if ($i > 0){
-     $query .= "`"  . mysql_real_escape_string($name) . "`";
+     $query .= "`"  . mysqli_real_escape_string($mysqli, $name) . "`";
  	}
      $i++;
 }
@@ -33,7 +33,7 @@ foreach ($_POST as $name => $val)
 		$query .= ", ";
 	}
 	if ($i > 0){
-     $query .= "'" .  mysql_real_escape_string($val) . "'";
+     $query .= "'" .  mysqli_real_escape_string($mysqli, $val) . "'";
 	}
      $i++;
 }
