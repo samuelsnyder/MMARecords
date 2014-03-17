@@ -11,6 +11,10 @@ DROP TABLE IF EXISTS `Fighters`;
   HeightInches int NOT NULL,
   Pounds int NOT NULL,
   InchesReach int NOT NULL,
+  GymID int NOT NULL,
+  CONSTRAINT `FK_Gyms_Fighters` 
+    FOREIGN KEY(`GymID`)
+    REFERENCES Gyms(`GymID`)
   PRIMARY KEY (`FighterID`)
 
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
