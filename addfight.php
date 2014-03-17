@@ -46,6 +46,11 @@ if ($res)
 	}
 	?>
 </select><br>
+Result<select name="ResultCode">
+		<option value=2>Fighter 2 Victory</option>
+		<option value=1>Fighter 1 Vicrtory</option>
+		<option value=0>Draw/No Contest</option>
+	</select>
 	<input type="submit" id="save" value="Save">
 </form>
 
