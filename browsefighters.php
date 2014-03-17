@@ -13,9 +13,7 @@ if ($res)
 		$row = $res->fetch_assoc();
 		echo "<tr><td>	<form method=post action=fighter.php><input type='hidden' name='Type' value='Fighters'>
 			<input type=hidden name='FighterID' value='" .$row['FighterID']. "'>" . $row['FirstName'] . " " . $row['LastName'] . "
-			</td><td><button> browse </button></form></td><td>
-			<form method=post action=delete.php><input type='hidden' name='Type' value='Fighters'>
-			<input type=hidden name='FighterID' value='" .$row['FighterID']. "'><button> remove </button></form></td></tr>";
+			</td><td><button> browse </button></form></td><td></tr>";
 	}
 	echo "</table>";
 }

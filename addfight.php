@@ -1,7 +1,8 @@
 <?php
 include 'header.php'; 
 ?>
-
+<a1>Fights</a1>
+<a2>Add Fight</a2>
 <?php
 $query = "SELECT FighterID, FirstName, LastName FROM Fighters ORDER BY FirstName ASC";
 
@@ -60,4 +61,5 @@ else
 {
 	echo "No results found";
 }
+
 ?>

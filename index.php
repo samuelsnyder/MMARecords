@@ -3,7 +3,7 @@
 
 <h1>Lookup Records</h1>
 
-<a href="browsefighters.php"> Fighters </a><br>
+<a href="browsefighters.php"> Fighters</a><br>
 
 <h1>Add to the database</h1>
 
@@ -13,5 +13,6 @@
 <a href="addpromo.php"> Add MMA Promotion </a><br>
 <a href="addstyle.php"> Add Martial Art Style </a><br>
 <a href="addfighterstyle.php"> Add Style to Fighter </a><br>
+<a href="addgym.php"> Add Gym </a><br>
 
 <?php include 'footer.php';?>
